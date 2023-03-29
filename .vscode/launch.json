@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Application",
+      "request": "launch",
+      "type": "node",
+      "protocol": "inspector",
+      "port": 9229,
+      "restart": true,
+
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nodemon"]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": ".",
+    "ecmaVersion": 2020
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "prettier/standard",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "none",
+        "varsIgnorePattern": "_.+"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars-experimental": ["error"],
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
+    "@typescript-eslint/no-var-requires": "warn",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": ["error"],
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
+    "no-array-constructor": "off",
+    "@typescript-eslint/no-array-constructor": ["error"],
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/keyword-spacing.md
+    "keyword-spacing": "off",
+    "@typescript-eslint/keyword-spacing": ["error"],
+
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
+    "@typescript-eslint/explicit-function-return-type": "error",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
+    "@typescript-eslint/no-explicit-any": "error",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+    "@typescript-eslint/no-non-null-assertion": "error",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
+    "@typescript-eslint/explicit-member-accessibility": "error",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
+    "require-await": "off",
+    "@typescript-eslint/require-await": "error",
+
+    "comma-dangle": ["error", "always-multiline"],
+
+    //https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
+    "semi": "off",
+    "@typescript-eslint/semi": ["error"],
+
+    "prettier/prettier": "error",
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-this.md
+    "no-invalid-this": "off",
+    "@typescript-eslint/no-invalid-this": ["error"],
+
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md
+    "@typescript-eslint/no-this-alias": [
+      "error",
+      {
+        "allowDestructuring": true, // Allow `const { props, state } = this`; false by default
+        "allowedNames": ["self"] // Allow `const self = this`; `[]` by default
+      }
+    ]
+  }
+}

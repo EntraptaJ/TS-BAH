@@ -1,0 +1,40 @@
+{
+  "name": "ts-core",
+  "version": "0.0.1",
+  "description": "TS-Core is a github repo template for TypeScript Projects",
+  "main": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "ts-estest ./src",
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p ./tsconfig.build.json",
+    "start:debug": "node --loader @k-foss/ts-esnode --experimental-modules --experimental-specifier-resolution=node --harmony-top-level-await ./",
+    "dev": "nodemon",
+    "prettier": "prettier --config .prettierrc --check \"src/**/*ts\"",
+    "lint": "eslint ./src --ext .js,.ts",
+    "runBin": "node --loader @k-foss/ts-esnode --experimental-modules --experimental-specifier-resolution=node --harmony-top-level-await ./src/Utils/runScript.ts"
+  },
+  "devDependencies": {
+    "@k-foss/ts-esnode": "^2.0.3",
+    "@k-foss/ts-estests": "^1.0.6",
+    "@types/faker": "^5.1.6",
+    "@types/node": "^18.15.1",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "faker": "^5.2.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "author": "",
+  "license": "MIT"
+}

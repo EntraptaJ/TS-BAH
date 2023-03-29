@@ -1,0 +1,26 @@
+{
+  "name": "TS-Core-TEMPLATE Container",
+  "dockerFile": "./Dockerfile.dev",
+  "settings": {
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
+  },
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-codeql",
+    "visualstudioexptteam.vscodeintellicode",
+    "eamodio.gitlens"
+  ],
+  "remoteUser": "node",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=ts-core-modules,target=/workspace/node_modules,type=volume"
+  ],
+  "remoteEnv": {
+    "SHELL": "/bin/bash"
+  },
+
+  "postCreateCommand": "sudo chown node -R node_modules && npm i"
+}
