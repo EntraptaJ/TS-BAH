@@ -1,9 +1,11 @@
 // src/index.ts
+import 'reflect-metadata';
 import { logger, LogMode } from './Library/Logger';
-import { sayHello } from './Utils/sayHello';
 
-logger.log(LogMode.INFO, `Starting TS-Core`);
+logger.log(LogMode.INFO, `Starting TS-BAS`);
 
-await sayHello('K-FOSS');
+logger.log(LogMode.DEBUG, `My name is Kristine, booting up the BAS system now`);
+
+
 
 export {};
