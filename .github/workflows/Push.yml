@@ -11,7 +11,7 @@ jobs:
         node: ['13.9', '13.10', '13.11', '14.x']
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.5.0
       - uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node }}
