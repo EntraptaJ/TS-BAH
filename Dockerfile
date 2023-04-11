@@ -1,4 +1,4 @@
-FROM node:15.6.0-slim as builder
+FROM node:19.0.0-slim as builder
 WORKDIR /app
 
 COPY ./package.json ./package-lock.json ./
@@ -13,7 +13,7 @@ RUN NODE_ENV=production npm run build
 
 
 
-FROM node:15.6.0-slim as fetcher
+FROM node:19.0.0-slim as fetcher
 WORKDIR /app
 
 COPY ./package.json ./package-lock.json ./
@@ -24,7 +24,7 @@ RUN npm ci
 
 
 
-FROM node:15.6.0-slim
+FROM node:19.0.0-slim
 WORKDIR /app
 
 COPY --from=fetcher /app/node_modules /app/node_modules
